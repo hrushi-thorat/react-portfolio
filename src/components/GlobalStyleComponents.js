@@ -35,7 +35,7 @@ h2{
     }
     h4{
         font-weight: bold;
-        
+        font-size: 1.5rem;
     }
     span{
         
