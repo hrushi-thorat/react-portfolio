@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
 body{
     background: #1b1b1b;
     font-size: 82.5%;
+    font-family: 'Inter', sans-serif;
 }
 button{
     font-weight: bold;
@@ -17,6 +18,7 @@ button{
     border: 3px solid #23d997;
     background: transparent;
     color: white;
+    font-family: 'Inter', sans-serif;
     transition: all 0.5s ease;
     &:hover{
         background-color: #23d997;
