@@ -1,10 +1,58 @@
 import React from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+// Images
+import athlete from "../img/athlete-small.png";
+import theracer from "../img/theracer-small.png";
+import goodtimes from "../img/goodtimes-small.png";
+const OurWork = () => {
+  return (
+    <Work>
+      <Movie>
+          <h2>Athelete</h2>
+          <div className="line"></div>
+          <Link>
+          <img src={athlete} alt="Athelete" />
+          </Link>
+      </Movie>
+      <Movie>
+          <h2>Racer</h2>
+          <div className="line"></div>
+          <Link>
+          <img src={theracer} alt="The Racer " />
+          </Link>
+      </Movie>
+      <Movie>
+          <h2>Good Times</h2>
+          <div className="line"></div>
+          <Link>
+          <img src={goodtimes } alt="Good Times" />
+          </Link>
+      </Movie>
+    </Work>
+  );
+};
 
-const OurWork=()=>{
-    return(
-        <div className="ourwork">
-            <h1>Our Work</h1>
-        </div>
-    )
+const Work = styled.div`
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 2rem 6rem;
+h2{
+    padding: 1rem 0rem;
 }
-export default OurWork
+`;
+const Movie = styled.div`
+  padding: 0rem 6rem;
+  .line{
+      height: 0.5rem;
+      background: #cccccc;
+      margin-bottom: 1rem;
+      width: 100%;
+  }
+  img{
+      width: 100%;
+      height: 70vh;
+      object-fit: cover;
+  }
+`;
+export default OurWork;
