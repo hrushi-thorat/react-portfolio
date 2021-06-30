@@ -1,23 +1,25 @@
 import React from "react";
 import home1 from "../img/home1.png";
+import Wave from "./Wave";
 import styled from "styled-components";
 import { About, Description, Hide, Image } from "../style";
-
+import { motion } from "framer-motion";
+import { TitleAnimation, PhotoAnimation } from "../pages/Animation";
 const AboutSection = () => {
   return (
     <About>
       <Description>
         <div className="title">
           <Hide>
-            <h2>We work to make</h2>
+            <motion.h2 variants={TitleAnimation}>We work to make</motion.h2>
           </Hide>
           <Hide>
-            <h2>
+            <motion.h2 variants={TitleAnimation}>
               your <span>dreams</span>
-            </h2>
+            </motion.h2>
           </Hide>
           <Hide>
-            <h2>come true</h2>
+            <motion.h2 variants={TitleAnimation}>come true</motion.h2>
           </Hide>
         </div>
         <p>
@@ -29,6 +31,7 @@ const AboutSection = () => {
       <Image>
         <img src={home1} alt="guy with a camera" />
       </Image>
+      <Wave />
     </About>
   );
 };
