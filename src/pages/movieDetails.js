@@ -4,28 +4,34 @@ import { useHistory } from "react-router-dom";
 import { MovieState } from "../movieState";
 import { useState } from "react";
 
+import { motion } from "framer-motion";
+import { PageAnimation } from "./Animation";
 
+const MovieDetail = () => {
+  const history = useHistory();
+  const url = history.location.pathname;
+  const [movies, setMovies] = useState(MovieState);
+  const [movie, setMovie] = useState(null);
 
-const MovieDetail=()=>{
-const history=useHistory();
-const url=history.location.pathname;
-const [movies,setMovies]=useState(MovieState);
-const [movie,setMovie]=useState(null);
-
-useEffect(() => {
+  useEffect(() => {
     const currentMovie = movies.filter((stateMovie) => stateMovie.url === url);
     setMovie(currentMovie[0]);
     console.log(setMovies);
   }, [movies, url]);
-    return(
-        <>
-        {movie && (
-        <Details>
-            <HeadLine>
+  return (
+    <>
+      {movie && (
+        <Details
+          exit="exit"
+          variants={PageAnimation}
+          initial="hidden"
+          animate="show"
+        >
+          <HeadLine>
             <h2>{movie.title}</h2>
-<img src={movie.mainImg} alt="movie" />
-            </HeadLine>
-            <Awards>
+            <img src={movie.mainImg} alt="movie" />
+          </HeadLine>
+          <Awards>
             {movie.awards.map((award) => (
               <Award
                 title={award.title}
@@ -35,19 +41,15 @@ useEffect(() => {
             ))}
           </Awards>
           <ImageDisplay>
-              <img src={movie.secondaryImg} alt="secondary" />
+            <img src={movie.secondaryImg} alt="secondary" />
           </ImageDisplay>
         </Details>
+      )}
+    </>
+  );
+};
 
-        )}
-        </>
-    )
-}
-
-
-
-
-const Details = styled.div`
+const Details = styled(motion.div)`
   color: white;
 `;
 const HeadLine = styled.div`
@@ -111,5 +113,4 @@ const Award = ({ title, description }) => {
     </AwardStyle>
   );
 };
-export default MovieDetail
-
+export default MovieDetail;
