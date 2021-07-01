@@ -7,56 +7,60 @@ import theracer from "../img/theracer-small.png";
 import goodtimes from "../img/goodtimes-small.png";
 
 import { motion } from "framer-motion";
-import { PageAnimation, LineAnim, Slider, SliderContainer } from "./Animation";
+import {
+  sliderContainer,
+  slider,
+  pageAnimation,
+  fade,
+  photoAnim,
+  lineAnim,
+} from "../pages/Animation";
+import { useScroll } from "../components/useScroll";
+
 const OurWork = () => {
+  const [element, controls] = useScroll();
+  const [element2, controls2] = useScroll();
   return (
     <Work
-      style={{ background: "#ffff" }}
-      // exit="exit"
-      variants={PageAnimation}
+      style={{ background: "#fff" }}
+      exit="exit"
+      variants={pageAnimation}
       initial="hidden"
       animate="show"
     >
-      <motion.div variants={SliderContainer}>
-        <Frame1 variants={Slider}></Frame1>
-        <Frame2 variants={Slider}></Frame2>
-        <Frame3 variants={Slider}></Frame3>
-        <Frame4 variants={Slider}></Frame4>
+      <motion.div variants={sliderContainer}>
+        <Frame1 variants={slider}></Frame1>
+        <Frame2 variants={slider}></Frame2>
+        <Frame3 variants={slider}></Frame3>
+        <Frame4 variants={slider}></Frame4>
       </motion.div>
       <Movie>
-        <h2>Athelete</h2>
-        <motion.div
-          className="line"
-          variants={LineAnim}
-          initial="hidden"
-          animate="show"
-        ></motion.div>
+        <motion.h2 variants={fade}>The Athlete</motion.h2>
+        <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/work/the-athlete">
-          <img src={athlete} alt="Athelete" />
+          <Hide>
+            <motion.img variants={photoAnim} src={athlete} alt="athlete" />
+          </Hide>
         </Link>
       </Movie>
-      <Movie>
-        <h2>Racer</h2>
-        <motion.div
-          className="line"
-          variants={LineAnim}
-          initial="hidden"
-          animate="show"
-        ></motion.div>
+      <Movie ref={element} variants={fade} animate={controls} initial="hidden">
+        <h2>The Racer</h2>
+        <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/work/the-racer">
-          <img src={theracer} alt="The Racer " />
+          <img src={theracer} alt="theracer" />
         </Link>
       </Movie>
-      <Movie>
+
+      <Movie
+        ref={element2}
+        variants={fade}
+        animate={controls2}
+        initial="hidden"
+      >
         <h2>Good Times</h2>
-        <motion.div
-          className="line"
-          variants={LineAnim}
-          initial="hidden"
-          animate="show"
-        ></motion.div>
+        <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/work/good-times">
-          <img src={goodtimes} alt="Good Times" />
+          <img src={goodtimes} alt="goodtimes" />
         </Link>
       </Movie>
     </Work>
@@ -71,7 +75,7 @@ const Work = styled(motion.div)`
     padding: 1rem 0rem;
   }
 `;
-const Movie = styled.div`
+const Movie = styled(motion.div)`
   padding: 0rem 6rem;
   .line {
     height: 0.5rem;
@@ -85,15 +89,18 @@ const Movie = styled.div`
     object-fit: cover;
   }
 `;
+const Hide = styled.div`
+  overflow: hidden;
+`;
 
 const Frame1 = styled(motion.div)`
   position: fixed;
-  z-index: 2;
-  top: 10%;
-  background: #fffebf;
   left: 0;
+  top: 10%;
   width: 100%;
   height: 100vh;
+  background: #fffebf;
+  z-index: 2;
 `;
 const Frame2 = styled(Frame1)`
   background: ff8efb;

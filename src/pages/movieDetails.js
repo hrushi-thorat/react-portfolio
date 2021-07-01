@@ -5,7 +5,7 @@ import { MovieState } from "../movieState";
 import { useState } from "react";
 
 import { motion } from "framer-motion";
-import { PageAnimation } from "./Animation";
+import { pageAnimation } from "../pages/Animation";
 
 const MovieDetail = () => {
   const history = useHistory();
@@ -23,7 +23,7 @@ const MovieDetail = () => {
       {movie && (
         <Details
           exit="exit"
-          variants={PageAnimation}
+          variants={pageAnimation}
           initial="hidden"
           animate="show"
         >
