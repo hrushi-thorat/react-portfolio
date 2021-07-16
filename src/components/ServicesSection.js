@@ -1,84 +1,108 @@
 import React from "react";
 //Import Icons
-import clock from "../img/clock.svg";
-import diaphragm from "../img/diaphragm.svg";
-import money from "../img/money.svg";
-import teamwork from "../img/teamwork.svg";
-import home2 from "../img/home2.png";
+import html from "../img/html.svg"
+import css from "../img/css.svg"
+import js from "../img/js.svg"
+import figma from "../img/figma.svg"
+import sass from "../img/sass.svg"
+import react from "../img/react.svg"
+
+
 // import Styles
 import styled from "styled-components";
-import { About, Description, Image } from "../style";
+import { motion } from "framer-motion";
+import { lineAnim } from "../pages/Animation";
 const ServicesSection = () => {
   return (
-    <Services>
-      <Description>
-        <h2>
-          High <span>quality</span> services
-        </h2>
-        <Cards>
-          <Card>
-            <div className="icon">
-              <img alt="icon" src={clock} />
-              <h3>Efficient</h3>
-            </div>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </Card>
-          <Card>
-            <div className="icon">
-              <img alt="icon" src={teamwork} />
-              <h3>Teamwork</h3>
-            </div>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </Card>
-          <Card>
-            <div className="icon">
-              <img alt="icon" src={diaphragm} />
-              <h3>Diaphragm</h3>
-            </div>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </Card>
-          <Card>
-            <div className="icon">
-              <img alt="icon" src={money} />
-              <h3>Affordable</h3>
-            </div>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </Card>
-        </Cards>
-      </Description>
-      <Image>
-        <img src={home2} alt=".." />
-      </Image>
-    </Services>
+    <Skills>
+      <Heading>
+      <h2>My Skills
+        <div variants={lineAnim} className="line"></div>
+      </h2>
+
+    <h3>Front-end</h3>
+      </Heading>
+      <SkillSetContainer>
+      <SkillSet>
+<SkillCard>
+<img src={html} alt="html" />
+</SkillCard>
+<SkillCard>
+<img src={css} alt="html" />
+</SkillCard>
+<SkillCard>
+<img src={js} alt="html" />
+</SkillCard>
+<SkillCard>
+<img src={sass} alt="html" />
+</SkillCard>
+<SkillCard>
+<img src={react} alt="html" />
+</SkillCard>
+<SkillCard>
+<img src={figma} alt="html" />
+</SkillCard>
+
+      </SkillSet>
+
+      </SkillSetContainer>
+    </Skills>
   );
 };
+const Skills=styled(motion.div)`
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: space-between;
+flex-direction: column;
+margin-top:1rem;
+`
+const Heading=styled(motion.div)`
+text-align:center;
+h2{
+  color: rgba(255,255,255,80%);
+  font-size: 3rem;
+  .line {
+    height: 0.3rem;
+    background: #23d992;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+}
+h3{
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  color: rgba(255,255,255,70%);
+}
+`
+const SkillSetContainer=styled(motion.div)`
 
-const Services = styled(About)`
-  h2 {
-    padding-bottom: 3rem;
-  }
-  p {
-    width: 70%;
-    padding: 1rem 0rem 3rem 0rem;
-  }
-`;
-const Cards= styled.div`
-display:flex;
-flex-wrap:wrap;
+margin: auto;
+display: flex;
+align-items: center;
+justify-content: center;
+`
+const SkillSet=styled(motion.div)`
+width: 50%;
+display: flex;
+flex-wrap: wrap;
+
 `
 
-const Card=styled.div`
-flex-basis: 12rem;
-margin-left:1rem;
-.icon{
-  display: flex;
-  align-items:center;
-  h3{
-    color: black;
-    background:white;
-    padding:0.5rem;
-    margin-left:1rem;
-  }
+const SkillCard=styled(motion.div)`
+height: 7.5rem;
+width: 7.5rem;
+border-radius: 50%;
+background: #C4C4C4;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 1rem;
+
+img{
+  padding-top: 0.8rem;
+  height: 80%;
+  width: 75%;
 }
 `
 export default ServicesSection;
