@@ -2,10 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 // Images
-import athlete from "../img/active-states.jpg";
+
 import theracer from "../img/theracer-small.png";
 import goodtimes from "../img/goodtimes-small.png";
-import github from "../img/github.svg"
+
 import { motion } from "framer-motion";
 import {
   sliderContainer,
@@ -16,10 +16,11 @@ import {
   lineAnim,
 } from "../pages/Animation";
 import { useScroll } from "../components/useScroll";
-
+import { ProjectDetails } from "../movieState";
 const OurWork = () => {
   const [element, controls] = useScroll();
   const [element2, controls2] = useScroll();
+  
   return (
     <Work
       style={{ background: "#fff" }}
@@ -34,18 +35,22 @@ const OurWork = () => {
         <Frame3 variants={slider}></Frame3>
         <Frame4 variants={slider}></Frame4>
       </motion.div>
-      <Movie>
+      {ProjectDetails.map((detail)=>(
+      <Movie   >
         <Title>
-        <motion.h2 variants={fade}>The Athlete</motion.h2>
-        <Button >GithHub</Button>
+        <motion.h2 variants={fade}>{detail.title}</motion.h2>
+        <a href={detail.githhub}>
+        <Button variants={fade}>GithHub</Button>
+        </a>
         </Title>
         <motion.div variants={lineAnim} className="line"></motion.div>
-        <a href="https://accordian-fem.netlify.app">
+        <a href={detail.liveSite}>
           <Hide>
-            <motion.img variants={photoAnim} src={athlete} alt="athlete" />
+            <motion.img variants={photoAnim} src={detail.cover} alt="athlete" />
           </Hide>
           </a>
       </Movie>
+))}
       <Movie ref={element} variants={fade} animate={controls} initial="hidden">
         <h2>The Racer</h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
