@@ -1,7 +1,7 @@
 import React from "react";
 // Import pages
 import AboutUs from "./pages/AboutUs";
-import ContactUS from "./pages/ContactUS";
+import Skills from "./pages/Skills";
 import OurWork from "./pages/OurWork";
 import Nav from "./components/Nav";
 import MovieDetail from "./pages/movieDetails";
@@ -11,6 +11,7 @@ import GlobalStyle from "./components/GlobalStyleComponents";
 import { Switch, Route, useLocation } from "react-router-dom";
 // Animatiom
 import { AnimatePresence } from "framer-motion";
+
 function App() {
   const location = useLocation();
   return (
@@ -29,7 +30,7 @@ function App() {
             <MovieDetail />
           </Route>
           <Route path="/contact">
-            <ContactUS />
+            <Skills />
           </Route>
         </Switch>
       </AnimatePresence>

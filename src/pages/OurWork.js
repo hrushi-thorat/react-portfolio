@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 // Images
-import athlete from "../img/athlete-small.png";
+import athlete from "../img/active-states.jpg";
 import theracer from "../img/theracer-small.png";
 import goodtimes from "../img/goodtimes-small.png";
 
@@ -37,11 +37,11 @@ const OurWork = () => {
       <Movie>
         <motion.h2 variants={fade}>The Athlete</motion.h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="/work/the-athlete">
+        <a href="https://accordian-fem.netlify.app">
           <Hide>
             <motion.img variants={photoAnim} src={athlete} alt="athlete" />
           </Hide>
-        </Link>
+          </a>
       </Movie>
       <Movie ref={element} variants={fade} animate={controls} initial="hidden">
         <h2>The Racer</h2>

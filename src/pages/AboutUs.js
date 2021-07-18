@@ -1,6 +1,6 @@
 import React from "react";
 import AboutSection from "../components/AboutSection";
-import ServicesSection from "../components/ServicesSection";
+
 import FaqSection from "../components/FaqSection";
 
 import { motion } from "framer-motion";
@@ -14,7 +14,7 @@ const AboutUs = () => {
       animate="show"
     >
       <AboutSection />
-      <ServicesSection />
+
       <FaqSection />
     </motion.div>
   );

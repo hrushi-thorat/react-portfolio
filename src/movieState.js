@@ -1,5 +1,6 @@
 //Import Images
-import athlete from "./img/athlete-small.png";
+import athlete from "./img/desktop-preview.jpg";
+import accordian from "./img/active-states.jpg";
 import goodtimes from "./img/goodtimes-small.png";
 import theracer from "./img/theracer-small.png";
 import athlete2 from "./img/athlete2.png";
@@ -9,8 +10,8 @@ import theracer2 from "./img/the-racer2.jpg";
 export const MovieState = () => {
   return [
     {
-      title: "The Athlete",
-      mainImg: athlete,
+      title: "Front-End Mntor Challanges",
+      mainImg: accordian,
       secondaryImg: athlete2,
       url: "/work/the-athlete",
       awards: [
