@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import athlete from "../img/active-states.jpg";
 import theracer from "../img/theracer-small.png";
 import goodtimes from "../img/goodtimes-small.png";
-
+import github from "../img/github.svg"
 import { motion } from "framer-motion";
 import {
   sliderContainer,
@@ -35,7 +35,10 @@ const OurWork = () => {
         <Frame4 variants={slider}></Frame4>
       </motion.div>
       <Movie>
+        <Title>
         <motion.h2 variants={fade}>The Athlete</motion.h2>
+        <Button >GithHub</Button>
+        </Title>
         <motion.div variants={lineAnim} className="line"></motion.div>
         <a href="https://accordian-fem.netlify.app">
           <Hide>
@@ -77,6 +80,7 @@ const Work = styled(motion.div)`
 `;
 const Movie = styled(motion.div)`
   padding: 0rem 6rem;
+
   .line {
     height: 0.5rem;
     background: #23d992;
@@ -89,10 +93,15 @@ const Movie = styled(motion.div)`
     object-fit: cover;
   }
 `;
+
 const Hide = styled.div`
   overflow: hidden;
 `;
-
+const Title=styled(motion.div)`
+display: flex;
+align-items: center;
+justify-content: space-between;
+`
 const Frame1 = styled(motion.div)`
   position: fixed;
   left: 0;
@@ -111,4 +120,8 @@ const Frame3 = styled(Frame1)`
 const Frame4 = styled(Frame1)`
   background: #8effa0;
 `;
+const Button=styled(motion.button)`
+color:black;
+`
+
 export default OurWork;
