@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import Navigation from "./Navigation";
+import MobileNavigation from "./MobileNavigation";
 import { useLocation } from "react-router";
 const Nav = () => {
   const { pathname } = useLocation();
@@ -12,32 +14,8 @@ const Nav = () => {
           Capture
         </Link>
       </h1>
-      <ul>
-        <li>
-          <Link to="/">1.About Us</Link>
-          <Line
-            transition={{ duration: 0.75 }}
-            initial={{ width: "0%" }}
-            animate={{ width: pathname === "/" ? "50%" : "0%" }}
-          />
-        </li>
-        <li>
-          <Link to="/work">2.Our Work</Link>
-          <Line
-            transition={{ duration: 0.75 }}
-            initial={{ width: "0%" }}
-            animate={{ width: pathname === "/work" ? "50%" : "0%" }}
-          />
-        </li>
-        <li>
-          <Link to="/contact">3.Skills</Link>
-          <Line
-            transition={{ duration: 0.75 }}
-            initial={{ width: "0%" }}
-            animate={{ width: pathname === "/contact" ? "50%" : "0%" }}
-          />
-        </li>
-      </ul>
+      <Navigation />
+      <MobileNavigation />
     </StyledNav>
   );
 };
@@ -67,22 +45,6 @@ const StyledNav = styled.nav`
   li {
     padding-left: 8rem;
     position: relative;
-  }
-  @media (max-width: 1300px) {
-    flex-direction: column;
-    padding: 2rem 1rem;
-    #logo {
-      display: inline-block;
-      margin: 1rem;
-    }
-    ul {
-      padding: 2rem;
-      justify-content: space-around;
-      width: 100%;
-      li {
-        padding: 0;
-      }
-    }
   }
 `;
 
