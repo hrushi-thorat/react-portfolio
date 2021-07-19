@@ -28,14 +28,33 @@ const StyledNav = styled.nav`
   align-items: center;
   padding: 1rem 6rem;
   background: #282828;
+  @media (max-width: 990px) {
+    opacity: 1;
+  }
   a {
     text-decoration: none;
     color: white;
+    @media (max-width: 990px) {
+      :hover {
+        color: #8c1cd1;
+      }
+    }
   }
   ul {
     list-style: none;
     display: flex;
     justify-content: space-between;
+    @media (max-width: 990px) {
+      flex-direction: column;
+      position: absolute;
+      top: 10vh;
+      right: 0;
+      width: 100%;
+      height: 20vh;
+      background: #181818;
+      border-top: 2px solid #8c1cd1;
+      padding: 0.8rem 0rem;
+    }
   }
   #logo {
     font-size: 1.2rem;
@@ -45,6 +64,9 @@ const StyledNav = styled.nav`
   li {
     padding-left: 8rem;
     position: relative;
+    @media (max-width: 990px) {
+      padding-left: 10%;
+    }
   }
 `;
 
@@ -57,8 +79,8 @@ const Line = styled(motion.div)`
   left: 60%;
   border-radius: 6rem;
 
-  @media (max-width: 1300px) {
-    left: 0%;
+  @media (max-width: 990px) {
+    display: none;
   }
 `;
 export default Nav;

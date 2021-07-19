@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import NavLinks from "./NavLinks";
 import { useState } from "react";
 //hamberger menu icon
-import Burger from "./Burger";
+
 import { CgMenuRound } from "react-icons/cg";
 import { CgCloseO } from "react-icons/cg";
 const MobileNavigation = () => {
@@ -24,10 +24,13 @@ const MobileNavigation = () => {
       <CgCloseO onClick={toggle} size="40px" color="white" />
     </BurgerMEnu>
   );
+
+  const CloseMobileMenu = () => setOpen(false);
   return (
     <MobileNavigationDiv>
-      {open ? closeIcon : hambergerIcon}?{/* <Burger onClick={toggle} /> */}
-      {open && <NavLinks />}
+      {open ? closeIcon : hambergerIcon}
+
+      {open && <NavLinks isMobile={true} CloseMobileMenu={CloseMobileMenu} />}
     </MobileNavigationDiv>
   );
 };
@@ -39,7 +42,6 @@ const MobileNavigationDiv = styled(motion.div)`
   display: none;
   @media (max-width: 990px) {
     display: flex;
-    background: red;
     align-items: center;
   }
 `;

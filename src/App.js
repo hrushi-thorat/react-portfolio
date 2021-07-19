@@ -4,7 +4,7 @@ import AboutUs from "./pages/AboutUs";
 import Skills from "./pages/Skills";
 import OurWork from "./pages/OurWork";
 import Nav from "./components/Nav";
-import MovieDetail from "./pages/movieDetails";
+
 // Import Styles
 import GlobalStyle from "./components/GlobalStyleComponents";
 // Import React Router
@@ -26,9 +26,7 @@ function App() {
           <Route path="/work" exact>
             <OurWork />
           </Route>
-          <Route path="/work/:id">
-            <MovieDetail />
-          </Route>
+
           <Route path="/contact">
             <Skills />
           </Route>
