@@ -65,6 +65,7 @@ const Skill = styled(motion.div)`
   align-items: center;
   flex-direction: column;
   margin-top: 1rem;
+  overflow-y: hidden;
 `;
 const Heading = styled(motion.div)`
   text-align: center;
@@ -88,7 +89,7 @@ const Heading = styled(motion.div)`
   }
 `;
 const SkillSetContainer = styled(motion.div)`
-  margin: 1rem auto;
+  margin: 0.6rem auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,7 +104,7 @@ const SkillSetContainer = styled(motion.div)`
     }
     font-weight: lighter;
     font-size: 1.8rem;
-    margin-top: 2rem;
+    margin-top: 0.6rem;
     color: rgba(255, 255, 255, 70%);
   }
 `;
