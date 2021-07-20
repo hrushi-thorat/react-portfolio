@@ -61,7 +61,7 @@ const OurWork = () => {
       />
       {javascript &&
         JavascriptProjectDetails.map((detail) => (
-          <Movie>
+          <Movie key={detail.id}>
             <Title>
               <motion.h2
                 variants={fade}
@@ -101,7 +101,7 @@ const OurWork = () => {
         ))}
       {front &&
         FrontProjectDetails.map((detail) => (
-          <Movie>
+          <Movie key={detail.id}>
             <Title>
               <motion.h2
                 variants={fade}
@@ -141,7 +141,7 @@ const OurWork = () => {
         ))}
       {html &&
         HtmlProjectDetails.map((detail) => (
-          <Movie>
+          <Movie key={detail.id}>
             <Title>
               <motion.h2
                 variants={fade}
@@ -181,7 +181,7 @@ const OurWork = () => {
         ))}
       {reactp &&
         ReactProjectDetails.map((detail) => (
-          <Movie>
+          <Movie key={detail.id}>
             <Title>
               <motion.h2
                 variants={fade}
@@ -289,9 +289,9 @@ const Movie = styled(motion.div)`
     height: 70vh;
     object-fit: cover;
     @media (max-width: 990px) {
-      height: 50vh;
+      height: 70vh;
     }
-    @media (max-width: 416px) {
+    @media (max-width: 580px) {
       height: 40vh;
     }
     @media (max-width: 379px) {
