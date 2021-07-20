@@ -34,7 +34,7 @@ const MobileNavigation = () => {
     </MobileNavigationDiv>
   );
 };
-const BurgerMEnu = styled.div`
+const BurgerMEnu = styled(motion.div)`
   position: absolute;
   right: 5%;
 `;

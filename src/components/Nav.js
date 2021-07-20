@@ -1,12 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+
 import Navigation from "./Navigation";
 import MobileNavigation from "./MobileNavigation";
-import { useLocation } from "react-router";
+
 const Nav = () => {
-  const { pathname } = useLocation();
   return (
     <StyledNav>
       <h1>
@@ -70,17 +69,4 @@ const StyledNav = styled.nav`
   }
 `;
 
-const Line = styled(motion.div)`
-  height: 0.3rem;
-  width: 0%;
-  background: #23d997;
-  position: absolute;
-  bottom: -80%;
-  left: 60%;
-  border-radius: 6rem;
-
-  @media (max-width: 990px) {
-    display: none;
-  }
-`;
 export default Nav;

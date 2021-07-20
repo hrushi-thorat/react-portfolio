@@ -1,6 +1,8 @@
 import React from "react";
+import Dropdown from "../components/Dropdown";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+
 // Images
 
 import theracer from "../img/theracer-small.png";
@@ -16,11 +18,23 @@ import {
   lineAnim,
 } from "../pages/Animation";
 import { useScroll } from "../components/useScroll";
-import { ProjectDetails } from "../movieState";
+import {
+  JavascriptProjectDetails,
+  ReactProjectDetails,
+  FrontProjectDetails,
+  HtmlProjectDetails,
+} from "../movieState";
+import { useState } from "react";
+
 const OurWork = () => {
   const [element, controls] = useScroll();
   const [element2, controls2] = useScroll();
-  
+
+  const [javascript, SetJavascript] = useState(false);
+  const [front, Setfront] = useState(true);
+  const [reactp, Setreactp] = useState(false);
+  const [html, Sethtml] = useState(false);
+
   return (
     <Work
       style={{ background: "#fff" }}
@@ -35,22 +49,176 @@ const OurWork = () => {
         <Frame3 variants={slider}></Frame3>
         <Frame4 variants={slider}></Frame4>
       </motion.div>
-      {ProjectDetails.map((detail)=>(
-      <Movie   >
-        <Title>
-        <motion.h2 variants={fade}>{detail.title}</motion.h2>
-        <a href={detail.githhub}>
-        <Button variants={fade}>GithHub</Button>
-        </a>
-        </Title>
-        <motion.div variants={lineAnim} className="line"></motion.div>
-        <a href={detail.liveSite}>
-          <Hide>
-            <motion.img variants={photoAnim} src={detail.cover} alt="athlete" />
-          </Hide>
-          </a>
-      </Movie>
-))}
+      <Dropdown
+        javascript={javascript}
+        SetJavascript={SetJavascript}
+        front={front}
+        Setfront={Setfront}
+        reactp={reactp}
+        Setreactp={Setreactp}
+        html={html}
+        Sethtml={Sethtml}
+      />
+      {javascript &&
+        JavascriptProjectDetails.map((detail) => (
+          <Movie>
+            <Title>
+              <motion.h2
+                variants={fade}
+                initial={fade.hidden}
+                animate={fade.show}
+              >
+                {detail.title}
+              </motion.h2>
+              <a href={detail.githhub}>
+                <Button
+                  variants={fade}
+                  initial={fade.hidden}
+                  animate={fade.show}
+                >
+                  GithHub
+                </Button>
+              </a>
+            </Title>
+            <motion.div
+              variants={lineAnim}
+              initial={lineAnim.hidden}
+              animate={lineAnim.show}
+              className="line"
+            ></motion.div>
+            <a href={detail.liveSite}>
+              <Hide>
+                <motion.img
+                  variants={photoAnim}
+                  initial={photoAnim.hidden}
+                  animate={photoAnim.show}
+                  src={detail.cover}
+                  alt="athlete"
+                />
+              </Hide>
+            </a>
+          </Movie>
+        ))}
+      {front &&
+        FrontProjectDetails.map((detail) => (
+          <Movie>
+            <Title>
+              <motion.h2
+                variants={fade}
+                initial={fade.hidden}
+                animate={fade.show}
+              >
+                {detail.title}
+              </motion.h2>
+              <a href={detail.githhub}>
+                <Button
+                  variants={fade}
+                  initial={fade.hidden}
+                  animate={fade.show}
+                >
+                  GithHub
+                </Button>
+              </a>
+            </Title>
+            <motion.div
+              variants={lineAnim}
+              initial={lineAnim.hidden}
+              animate={lineAnim.show}
+              className="line"
+            ></motion.div>
+            <a href={detail.liveSite}>
+              <Hide>
+                <motion.img
+                  variants={photoAnim}
+                  initial={photoAnim.hidden}
+                  animate={photoAnim.show}
+                  src={detail.cover}
+                  alt="athlete"
+                />
+              </Hide>
+            </a>
+          </Movie>
+        ))}
+      {html &&
+        HtmlProjectDetails.map((detail) => (
+          <Movie>
+            <Title>
+              <motion.h2
+                variants={fade}
+                initial={fade.hidden}
+                animate={fade.show}
+              >
+                {detail.title}
+              </motion.h2>
+              <a href={detail.githhub}>
+                <Button
+                  variants={fade}
+                  initial={fade.hidden}
+                  animate={fade.show}
+                >
+                  GithHub
+                </Button>
+              </a>
+            </Title>
+            <motion.div
+              variants={lineAnim}
+              initial={lineAnim.hidden}
+              animate={lineAnim.show}
+              className="line"
+            ></motion.div>
+            <a href={detail.liveSite}>
+              <Hide>
+                <motion.img
+                  variants={photoAnim}
+                  initial={photoAnim.hidden}
+                  animate={photoAnim.show}
+                  src={detail.cover}
+                  alt="athlete"
+                />
+              </Hide>
+            </a>
+          </Movie>
+        ))}
+      {reactp &&
+        ReactProjectDetails.map((detail) => (
+          <Movie>
+            <Title>
+              <motion.h2
+                variants={fade}
+                initial={fade.hidden}
+                animate={fade.show}
+              >
+                {detail.title}
+              </motion.h2>
+              <a href={detail.githhub}>
+                <Button
+                  variants={fade}
+                  initial={fade.hidden}
+                  animate={fade.show}
+                >
+                  GithHub
+                </Button>
+              </a>
+            </Title>
+            <motion.div
+              variants={lineAnim}
+              initial={lineAnim.hidden}
+              animate={lineAnim.show}
+              className="line"
+            ></motion.div>
+            <a href={detail.liveSite}>
+              <Hide>
+                <motion.img
+                  variants={photoAnim}
+                  initial={photoAnim.hidden}
+                  animate={photoAnim.show}
+                  src={detail.cover}
+                  alt="athlete"
+                />
+              </Hide>
+            </a>
+          </Movie>
+        ))}
       <Movie ref={element} variants={fade} animate={controls} initial="hidden">
         <h2>The Racer</h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
@@ -80,17 +248,15 @@ const Work = styled(motion.div)`
   overflow: hidden;
   padding: 2rem 6rem;
   @media (max-width: 1300px) {
-    
     padding: 2rem 2rem;
   }
   h2 {
     padding: 1rem 0rem;
   }
-
 `;
 const Movie = styled(motion.div)`
   padding: 0rem 6rem;
-
+  margin-top: 1rem;
   .line {
     height: 0.5rem;
     background: #23d992;
@@ -107,11 +273,11 @@ const Movie = styled(motion.div)`
 const Hide = styled.div`
   overflow: hidden;
 `;
-const Title=styled(motion.div)`
-display: flex;
-align-items: center;
-justify-content: space-between;
-`
+const Title = styled(motion.div)`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
 const Frame1 = styled(motion.div)`
   position: fixed;
   left: 0;
@@ -130,8 +296,8 @@ const Frame3 = styled(Frame1)`
 const Frame4 = styled(Frame1)`
   background: #8effa0;
 `;
-const Button=styled(motion.button)`
-color:black;
-`
+const Button = styled(motion.button)`
+  color: black;
+`;
 
 export default OurWork;
