@@ -65,7 +65,6 @@ const Skill = styled(motion.div)`
   align-items: center;
   flex-direction: column;
   margin-top: 1rem;
-  overflow-y: hidden;
 `;
 const Heading = styled(motion.div)`
   text-align: center;
@@ -112,6 +111,30 @@ const SkillSet = styled(motion.div)`
   width: 50%;
   display: flex;
   flex-wrap: wrap;
+  @media (max-width: 770px) {
+    width: 51%;
+  }
+  @media (max-width: 752px) {
+    width: 52%;
+  }
+  @media (max-width: 500px) {
+    width: 60%;
+  }
+  @media (max-width: 425px) {
+    width: 63%;
+  }
+  @media (max-width: 405px) {
+    width: 63.3%;
+  }
+  @media (max-width: 380px) {
+    width: 68%;
+  }
+  @media (max-width: 380px) {
+    width: 75%;
+  }
+  @media (max-width: 320px) {
+    width: 80%;
+  }
 `;
 
 const SkillCard = styled(motion.div)`

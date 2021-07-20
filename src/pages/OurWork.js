@@ -288,8 +288,12 @@ const Movie = styled(motion.div)`
     width: 100%;
     height: 70vh;
     object-fit: cover;
+
     @media (max-width: 990px) {
       height: 70vh;
+    }
+    @media (max-width: 768px) {
+      height: 45vh;
     }
     @media (max-width: 580px) {
       height: 40vh;

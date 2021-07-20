@@ -29,7 +29,15 @@ const StyledNav = styled.nav`
   background: #282828;
   @media (max-width: 990px) {
     opacity: 1;
+    padding: 1rem 5rem;
   }
+  @media (max-width: 700px) {
+    padding: 1rem 4rem;
+  }
+  @media (max-width: 400px) {
+    padding: 1rem 2rem;
+  }
+
   a {
     text-decoration: none;
     color: white;
