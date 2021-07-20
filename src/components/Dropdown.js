@@ -68,10 +68,17 @@ background: gray;
 width:100%;
 left: 0;
 top:10vh;
+/* justify-content: space-between; */
 padding-top: 0;
 font-weight: bolder;
 font-size: 1.3rem;
 margin-bottom: 3rem;
+@media (max-width: 990px) {
+    font-size:1rem;
+  }
+@media (max-width: 488px) {
+    font-size:0.8rem;
+  }
 /* display: none; */
 ul{
     color:white;
@@ -80,6 +87,15 @@ ul{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media (max-width: 990px) {
+    padding: 0.6rem 1.5rem 0rem 6rem;
+  }
+    @media (max-width: 416px) {
+    padding: 0.6rem 1.5rem 0rem 4rem;
+  }
+    @media (max-width: 339px) {
+    padding: 0.6rem 1.5rem 0rem 3rem;
+  }
 
 }
 li{

@@ -250,23 +250,53 @@ const Work = styled(motion.div)`
   @media (max-width: 1300px) {
     padding: 2rem 2rem;
   }
+  @media (max-width: 990px) {
+    padding: 1.8rem 1.8rem;
+  }
+  @media (max-width: 416px) {
+    padding: 1.5rem 1.5rem;
+  }
+  @media (max-width: 339px) {
+    padding: 1rem 1rem;
+  }
   h2 {
     padding: 1rem 0rem;
   }
 `;
 const Movie = styled(motion.div)`
-  padding: 0rem 6rem;
+  padding: 0rem 2%;
   margin-top: 1rem;
+  /* @media (max-width: 990px) {
+    padding: 0rem 5rem;
+  }
+  @media (max-width: 416px) {
+    padding: 0rem 3rem;
+  }
+  @media (max-width: 379px) {
+    padding: 0rem 1rem;
+  } */
   .line {
     height: 0.5rem;
     background: #23d992;
     margin-bottom: 1rem;
     width: 100%;
+    @media (max-width: 464px) {
+      height: 0.3rem;
+    }
   }
   img {
     width: 100%;
     height: 70vh;
     object-fit: cover;
+    @media (max-width: 990px) {
+      height: 50vh;
+    }
+    @media (max-width: 416px) {
+      height: 40vh;
+    }
+    @media (max-width: 379px) {
+      height: 30vh;
+    }
   }
 `;
 
@@ -277,6 +307,20 @@ const Title = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  h2 {
+    @media (max-width: 990px) {
+      font-size: 3rem;
+    }
+    @media (max-width: 600px) {
+      font-size: 2.3rem;
+    }
+    @media (max-width: 464px) {
+      font-size: 1.8rem;
+    }
+    @media (max-width: 396px) {
+      font-size: 1.3rem;
+    }
+  }
 `;
 const Frame1 = styled(motion.div)`
   position: fixed;

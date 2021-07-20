@@ -24,6 +24,24 @@ button{
         background-color: #23d997;
         color: white;
     }
+    @media (max-width: 990px) {
+        padding: 0.8rem 1.8rem;
+        font-size: 0.9rem;
+        border: 2.9px solid #23d997;
+    }
+    @media (max-width: 600px) {
+        padding: 0.7rem 1.7rem;
+        font-size: 0.8rem;
+        border: 2.9px solid #23d997;
+    }
+    @media (max-width: 464px) {
+        padding: 0.6rem 1.6rem;
+        font-size: 0.8rem;
+    }
+    @media (max-width: 396px) {
+        padding: 0.6rem 1.6rem;
+        font-size: 0.7rem;
+    }
 }
 
 h2{
