@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.js": "/static/js/main.bd8a7dde.chunk.js",
+    "main.js.map": "/static/js/main.bd8a7dde.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.98b2f708.js",
+    "runtime-main.js.map": "/static/js/runtime-main.98b2f708.js.map",
+    "static/js/2.7f435508.chunk.js": "/static/js/2.7f435508.chunk.js",
+    "static/js/2.7f435508.chunk.js.map": "/static/js/2.7f435508.chunk.js.map",
+    "static/js/3.2bef9694.chunk.js": "/static/js/3.2bef9694.chunk.js",
+    "static/js/3.2bef9694.chunk.js.map": "/static/js/3.2bef9694.chunk.js.map",
+    "index.html": "/index.html",
+    "static/js/2.7f435508.chunk.js.LICENSE.txt": "/static/js/2.7f435508.chunk.js.LICENSE.txt",
+    "static/media/ArticalComponent.05c52ca5.jpg": "/static/media/ArticalComponent.05c52ca5.jpg",
+    "static/media/Base-apparel.83b71256.jpg": "/static/media/Base-apparel.83b71256.jpg",
+    "static/media/active-states.2107c495.jpg": "/static/media/active-states.2107c495.jpg",
+    "static/media/beatMaker.eb3df131.PNG": "/static/media/beatMaker.eb3df131.PNG",
+    "static/media/cardGame.0a4d05f6.PNG": "/static/media/cardGame.0a4d05f6.PNG",
+    "static/media/css.74d7bcc1.svg": "/static/media/css.74d7bcc1.svg",
+    "static/media/figma.753c0742.svg": "/static/media/figma.753c0742.svg",
+    "static/media/goodtimes-small.94ab060d.png": "/static/media/goodtimes-small.94ab060d.png",
+    "static/media/home1.937e0a6a.JPG": "/static/media/home1.937e0a6a.JPG",
+    "static/media/html.2b2e078a.svg": "/static/media/html.2b2e078a.svg",
+    "static/media/java-icon.3c5854fc.svg": "/static/media/java-icon.3c5854fc.svg",
+    "static/media/js.90384b2d.svg": "/static/media/js.90384b2d.svg",
+    "static/media/react.ae626225.svg": "/static/media/react.ae626225.svg",
+    "static/media/sass.8bc32fe1.svg": "/static/media/sass.8bc32fe1.svg",
+    "static/media/theracer-small.51874213.png": "/static/media/theracer-small.51874213.png",
+    "static/media/todo.ab7e3a11.PNG": "/static/media/todo.ab7e3a11.PNG"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.98b2f708.js",
+    "static/js/2.7f435508.chunk.js",
+    "static/js/main.bd8a7dde.chunk.js"
+  ]
+}
