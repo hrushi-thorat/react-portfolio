@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { useState } from "react";
 import { BiMenuAltLeft } from "react-icons/bi";
 import { motion } from "framer-motion";
+import { fade } from "../pages/Animation";
 
 const Dropdown = ({
   javascript,
@@ -45,7 +46,7 @@ const Dropdown = ({
 
   return (
     <div>
-      <Menu>
+      <Menu variants={fade}>
         <BiMenuAltLeft size="40px" onClick={toggle} />
       </Menu>
       {open && (

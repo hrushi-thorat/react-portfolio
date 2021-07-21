@@ -27,6 +27,11 @@ export const Description = styled.div`
       margin: 2rem 0rem 5rem 0rem;
     }
   }
+  @media (max-width: 414px) {
+    button {
+      margin: 5rem 1rem;
+    }
+  }
 `;
 export const Image = styled.div`
   flex: 1;
@@ -35,7 +40,7 @@ export const Image = styled.div`
     width: 100%;
     height: 80vh;
     object-fit: cover;
-    @media (max-width: 360px) {
+    @media (max-width: 500px) {
       display: none;
     }
   }

@@ -20,6 +20,7 @@ button{
     color: white;
     font-family: 'Inter', sans-serif;
     transition: all 0.5s ease;
+    margin-left: 1rem;
     &:hover{
         background-color: #23d997;
         color: white;
@@ -37,6 +38,7 @@ button{
     @media (max-width: 464px) {
         padding: 0.6rem 1.6rem;
         font-size: 0.8rem;
+        
     }
     @media (max-width: 396px) {
         padding: 0.6rem 1.6rem;

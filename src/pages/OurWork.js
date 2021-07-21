@@ -70,7 +70,7 @@ const OurWork = () => {
               >
                 {detail.title}
               </motion.h2>
-              <a href={detail.githhub}>
+              <a href={detail.githhub} rel="noreferrer" target="_blank">
                 <Button
                   variants={fade}
                   initial={fade.hidden}
@@ -86,7 +86,7 @@ const OurWork = () => {
               animate={lineAnim.show}
               className="line"
             ></motion.div>
-            <a href={detail.liveSite}>
+            <a href={detail.liveSite} rel="noreferrer" target="_blank">
               <Hide>
                 <motion.img
                   variants={photoAnim}
@@ -110,7 +110,7 @@ const OurWork = () => {
               >
                 {detail.title}
               </motion.h2>
-              <a href={detail.githhub}>
+              <a href={detail.githhub} rel="noreferrer" target="_blank">
                 <Button
                   variants={fade}
                   initial={fade.hidden}
@@ -126,7 +126,7 @@ const OurWork = () => {
               animate={lineAnim.show}
               className="line"
             ></motion.div>
-            <a href={detail.liveSite}>
+            <a href={detail.liveSite} rel="noreferrer" target="_blank">
               <Hide>
                 <motion.img
                   variants={photoAnim}
@@ -150,7 +150,7 @@ const OurWork = () => {
               >
                 {detail.title}
               </motion.h2>
-              <a href={detail.githhub}>
+              <a href={detail.githhub} rel="noreferrer" target="_blank">
                 <Button
                   variants={fade}
                   initial={fade.hidden}
@@ -166,7 +166,7 @@ const OurWork = () => {
               animate={lineAnim.show}
               className="line"
             ></motion.div>
-            <a href={detail.liveSite}>
+            <a href={detail.liveSite} rel="noreferrer" target="_blank">
               <Hide>
                 <motion.img
                   variants={photoAnim}
@@ -190,7 +190,7 @@ const OurWork = () => {
               >
                 {detail.title}
               </motion.h2>
-              <a href={detail.githhub}>
+              <a href={detail.githhub} rel="noreferrer" target="_blank">
                 <Button
                   variants={fade}
                   initial={fade.hidden}
@@ -206,7 +206,7 @@ const OurWork = () => {
               animate={lineAnim.show}
               className="line"
             ></motion.div>
-            <a href={detail.liveSite}>
+            <a href={detail.liveSite} rel="noreferrer" target="_blank">
               <Hide>
                 <motion.img
                   variants={photoAnim}
@@ -298,8 +298,11 @@ const Movie = styled(motion.div)`
     @media (max-width: 580px) {
       height: 40vh;
     }
-    @media (max-width: 379px) {
+    @media (max-width: 414px) {
       height: 30vh;
+    }
+    @media (max-width: 379px) {
+      height: 25vh;
     }
   }
 `;

@@ -4,6 +4,7 @@ import Wave from "./Wave";
 import { About, Description, Hide, Image } from "../style";
 import { motion } from "framer-motion";
 import { titleAnim, fade, photoAnim } from "../pages/Animation";
+import styled from "styled-components";
 const AboutSection = () => {
   return (
     <About>
@@ -24,7 +25,14 @@ const AboutSection = () => {
         <motion.p variants={fade}>
           A Creative Front End Developer trying My Hands On Designing
         </motion.p>
-        <motion.button variants={fade}>Contact Us</motion.button>
+   
+        <motion.a  href="https://github.com/hrushi-thorat" rel="noreferrer" target="_blank">
+        <motion.button variants={fade}>Github</motion.button>
+        </motion.a>
+        <motion.a  href="https://drive.google.com/file/d/1-zbnuc8iNlTbNPmchMItSEeBnUB6KjWG/view?usp=sharing" rel="noreferrer" target="_blank">
+        <motion.button variants={fade}>Resume</motion.button>
+        </motion.a>
+
       </Description>
       <Image>
         <motion.img variants={photoAnim} src={home1} alt="guy with a camera" />

@@ -117,6 +117,9 @@ const SkillSet = styled(motion.div)`
   @media (max-width: 752px) {
     width: 52%;
   }
+  @media (max-width: 710px) {
+    width: 55%;
+  }
   @media (max-width: 500px) {
     width: 60%;
   }
@@ -124,11 +127,9 @@ const SkillSet = styled(motion.div)`
     width: 63%;
   }
   @media (max-width: 405px) {
-    width: 63.3%;
+    width: 70%;
   }
-  @media (max-width: 380px) {
-    width: 68%;
-  }
+
   @media (max-width: 380px) {
     width: 75%;
   }

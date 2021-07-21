@@ -29,7 +29,7 @@ const Svg = styled.div`
   z-index: -1;
   left: 0;
   width: 100%;
-  @media (max-width: 360px) {
+  @media (max-width: 500px) {
     bottom: 50%;
   }
 `;
