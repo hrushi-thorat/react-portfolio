@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/static/js/main.bd8a7dde.chunk.js",
-    "main.js.map": "/static/js/main.bd8a7dde.chunk.js.map",
+    "main.js": "/static/js/main.88aa8b49.chunk.js",
+    "main.js.map": "/static/js/main.88aa8b49.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.98b2f708.js",
     "runtime-main.js.map": "/static/js/runtime-main.98b2f708.js.map",
-    "static/js/2.7f435508.chunk.js": "/static/js/2.7f435508.chunk.js",
-    "static/js/2.7f435508.chunk.js.map": "/static/js/2.7f435508.chunk.js.map",
+    "static/js/2.acf6f865.chunk.js": "/static/js/2.acf6f865.chunk.js",
+    "static/js/2.acf6f865.chunk.js.map": "/static/js/2.acf6f865.chunk.js.map",
     "static/js/3.2bef9694.chunk.js": "/static/js/3.2bef9694.chunk.js",
     "static/js/3.2bef9694.chunk.js.map": "/static/js/3.2bef9694.chunk.js.map",
     "index.html": "/index.html",
-    "static/js/2.7f435508.chunk.js.LICENSE.txt": "/static/js/2.7f435508.chunk.js.LICENSE.txt",
+    "static/js/2.acf6f865.chunk.js.LICENSE.txt": "/static/js/2.acf6f865.chunk.js.LICENSE.txt",
     "static/media/ArticalComponent.05c52ca5.jpg": "/static/media/ArticalComponent.05c52ca5.jpg",
     "static/media/Base-apparel.83b71256.jpg": "/static/media/Base-apparel.83b71256.jpg",
     "static/media/active-states.2107c495.jpg": "/static/media/active-states.2107c495.jpg",
-    "static/media/beatMaker.eb3df131.PNG": "/static/media/beatMaker.eb3df131.PNG",
+    "static/media/beatMaker.bec525ae.PNG": "/static/media/beatMaker.bec525ae.PNG",
     "static/media/cardGame.0a4d05f6.PNG": "/static/media/cardGame.0a4d05f6.PNG",
     "static/media/css.74d7bcc1.svg": "/static/media/css.74d7bcc1.svg",
     "static/media/figma.753c0742.svg": "/static/media/figma.753c0742.svg",
@@ -29,7 +29,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.98b2f708.js",
-    "static/js/2.7f435508.chunk.js",
-    "static/js/main.bd8a7dde.chunk.js"
+    "static/js/2.acf6f865.chunk.js",
+    "static/js/main.88aa8b49.chunk.js"
   ]
 }
