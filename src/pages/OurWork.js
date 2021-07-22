@@ -1,14 +1,8 @@
 import React from "react";
-import Dropdown from "../components/Dropdown";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
-
-// Images
-
-import theracer from "../img/theracer-small.png";
-import goodtimes from "../img/goodtimes-small.png";
-
 import { motion } from "framer-motion";
+import Dropdown from "../components/Dropdown";
+//importing Animations
 import {
   sliderContainer,
   slider,
@@ -17,23 +11,18 @@ import {
   photoAnim,
   lineAnim,
 } from "../pages/Animation";
-import { useScroll } from "../components/useScroll";
+
 import {
   JavascriptProjectDetails,
   ReactProjectDetails,
   FrontProjectDetails,
-  HtmlProjectDetails,
 } from "../movieState";
 import { useState } from "react";
 
 const OurWork = () => {
-  const [element, controls] = useScroll();
-  const [element2, controls2] = useScroll();
-
   const [javascript, SetJavascript] = useState(false);
   const [front, Setfront] = useState(true);
   const [reactp, Setreactp] = useState(false);
-  const [html, Sethtml] = useState(false);
 
   return (
     <Work
@@ -56,9 +45,8 @@ const OurWork = () => {
         Setfront={Setfront}
         reactp={reactp}
         Setreactp={Setreactp}
-        html={html}
-        Sethtml={Sethtml}
       />
+
       {javascript &&
         JavascriptProjectDetails.map((detail) => (
           <Movie key={detail.id}>
@@ -139,46 +127,6 @@ const OurWork = () => {
             </a>
           </Movie>
         ))}
-      {html &&
-        HtmlProjectDetails.map((detail) => (
-          <Movie key={detail.id}>
-            <Title>
-              <motion.h2
-                variants={fade}
-                initial={fade.hidden}
-                animate={fade.show}
-              >
-                {detail.title}
-              </motion.h2>
-              <a href={detail.githhub} rel="noreferrer" target="_blank">
-                <Button
-                  variants={fade}
-                  initial={fade.hidden}
-                  animate={fade.show}
-                >
-                  GithHub
-                </Button>
-              </a>
-            </Title>
-            <motion.div
-              variants={lineAnim}
-              initial={lineAnim.hidden}
-              animate={lineAnim.show}
-              className="line"
-            ></motion.div>
-            <a href={detail.liveSite} rel="noreferrer" target="_blank">
-              <Hide>
-                <motion.img
-                  variants={photoAnim}
-                  initial={photoAnim.hidden}
-                  animate={photoAnim.show}
-                  src={detail.cover}
-                  alt="athlete"
-                />
-              </Hide>
-            </a>
-          </Movie>
-        ))}
       {reactp &&
         ReactProjectDetails.map((detail) => (
           <Movie key={detail.id}>
@@ -219,26 +167,6 @@ const OurWork = () => {
             </a>
           </Movie>
         ))}
-      <Movie ref={element} variants={fade} animate={controls} initial="hidden">
-        <h2>The Racer</h2>
-        <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="/work/the-racer">
-          <img src={theracer} alt="theracer" />
-        </Link>
-      </Movie>
-
-      <Movie
-        ref={element2}
-        variants={fade}
-        animate={controls2}
-        initial="hidden"
-      >
-        <h2>Good Times</h2>
-        <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="/work/good-times">
-          <img src={goodtimes} alt="goodtimes" />
-        </Link>
-      </Movie>
     </Work>
   );
 };
@@ -266,15 +194,7 @@ const Work = styled(motion.div)`
 const Movie = styled(motion.div)`
   padding: 0rem 2%;
   margin-top: 1rem;
-  /* @media (max-width: 990px) {
-    padding: 0rem 5rem;
-  }
-  @media (max-width: 416px) {
-    padding: 0rem 3rem;
-  }
-  @media (max-width: 379px) {
-    padding: 0rem 1rem;
-  } */
+
   .line {
     height: 0.5rem;
     background: #23d992;
@@ -339,10 +259,10 @@ const Frame1 = styled(motion.div)`
   z-index: 2;
 `;
 const Frame2 = styled(Frame1)`
-  background: ff8efb;
+  background: #ff8efb;
 `;
 const Frame3 = styled(Frame1)`
-  background: 8ed2ff;
+  background: #8ed2ff;
 `;
 const Frame4 = styled(Frame1)`
   background: #8effa0;

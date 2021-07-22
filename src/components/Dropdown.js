@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { useState } from "react";
 import { BiMenuAltLeft } from "react-icons/bi";
 import { motion } from "framer-motion";
-import { fade } from "../pages/Animation";
+import { NavItemsAnim, NavAnim, NavBarAnim } from "../pages/Animation";
 
 const Dropdown = ({
   javascript,
@@ -11,8 +11,6 @@ const Dropdown = ({
   Setfront,
   reactp,
   Setreactp,
-  html,
-  Sethtml,
 }) => {
   const [open, setOpen] = useState(false);
   const toggle = () => {
@@ -23,39 +21,35 @@ const Dropdown = ({
     SetJavascript(!javascript);
     Setfront(false);
     Setreactp(false);
-    Sethtml(false);
   };
   const FrontSet = () => {
     Setfront(!front);
     SetJavascript(false);
     Setreactp(false);
-    Sethtml(false);
   };
   const ReactSets = () => {
     SetJavascript(false);
     Setfront(false);
     Setreactp(!reactp);
-    Sethtml(false);
-  };
-  const HtmlSet = () => {
-    SetJavascript(false);
-    Setfront(false);
-    Setreactp(false);
-    Sethtml(!html);
   };
 
   return (
     <div>
-      <Menu variants={fade}>
+      <Menu variants={NavAnim}>
         <BiMenuAltLeft size="40px" onClick={toggle} />
       </Menu>
       {open && (
-        <Drop>
+        <Drop variants={NavBarAnim}>
           <ul>
-            <li onClick={JsSet}>Javascript</li>
-            <li onClick={ReactSets}>React</li>
-            <li onClick={FrontSet}>FrontEnd Mentor</li>
-            <li onClick={HtmlSet}>Html,Css</li>
+            <motion.li variants={NavItemsAnim} onClick={JsSet}>
+              Javascript
+            </motion.li>
+            <motion.li variants={NavItemsAnim} onClick={ReactSets}>
+              React
+            </motion.li>
+            <motion.li variants={NavItemsAnim} onClick={FrontSet}>
+              FrontEnd Mentor
+            </motion.li>
           </ul>
         </Drop>
       )}

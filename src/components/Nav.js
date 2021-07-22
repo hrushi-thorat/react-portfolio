@@ -10,7 +10,7 @@ const Nav = () => {
     <StyledNav>
       <h1>
         <Link id="logo" to="/">
-          Capture
+          <h2 id="logo">Hrushi</h2>
         </Link>
       </h1>
       <Navigation />

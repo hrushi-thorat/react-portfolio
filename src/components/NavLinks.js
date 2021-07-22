@@ -16,7 +16,7 @@ const NavLinks = (props) => {
         transition={{ delay: 0.05 }}
         onClick={() => props.isMobile && props.CloseMobileMenu()}
       >
-        <Link to="/">1.About Us</Link>
+        <Link to="/">About</Link>
         <Line
           transition={{ duration: 0.75 }}
           initial={{ width: "0%" }}
@@ -29,7 +29,7 @@ const NavLinks = (props) => {
         transition={{ delay: 0.1 }}
         onClick={() => props.isMobile && props.CloseMobileMenu()}
       >
-        <Link to="/work">2.Our Work</Link>
+        <Link to="/work">Projects</Link>
         <Line
           transition={{ duration: 0.75 }}
           initial={{ width: "0%" }}
@@ -42,7 +42,7 @@ const NavLinks = (props) => {
         transition={{ delay: 0.15 }}
         onClick={() => props.isMobile && props.CloseMobileMenu()}
       >
-        <Link to="/contact">3.Skills</Link>
+        <Link to="/contact">Skills</Link>
         <Line
           transition={{ duration: 0.75 }}
           initial={{ width: "0%" }}
