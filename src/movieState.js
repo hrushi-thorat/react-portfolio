@@ -11,7 +11,7 @@ import column from "./img/column.jpg";
 import statsPreview from "./img/Stats.jpg";
 import ProfileCard from "./img/ProfileCard.jpg";
 import TestmonialGrid from "./img/GridSection.jpg";
-import moviesz from "./img/moviesz";
+import moviesz from "./img/Moviezz.PNG";
 export const JavascriptProjectDetails = [
   {
     title: "ToDo List",
