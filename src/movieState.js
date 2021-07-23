@@ -11,6 +11,7 @@ import column from "./img/column.jpg";
 import statsPreview from "./img/Stats.jpg";
 import ProfileCard from "./img/ProfileCard.jpg";
 import TestmonialGrid from "./img/GridSection.jpg";
+import moviesz from "./img/moviesz";
 export const JavascriptProjectDetails = [
   {
     title: "ToDo List",
@@ -37,8 +38,8 @@ export const JavascriptProjectDetails = [
   {
     title: "Base Apparel",
     cover: baseApparel,
-    githhub: "https://github.com/hrushi-thorat/faq-accordion-card-main",
-    liveSite: "https://accordian-fem.netlify.app",
+    githhub: "https://github.com/hrushi-thorat/base-apparel-coming-soon-master",
+    liveSite: "https://base-apperal.netlify.app",
     id: 4,
   },
   {
@@ -65,14 +66,21 @@ export const ReactProjectDetails = [
     liveSite: "https://https://ignite-reactapp.herokuapp.com/",
     id: 26,
   },
+  {
+    title: "Moviezz",
+    cover: moviesz,
+    githhub: "https://github.com/hrushi-thorat/react-moviezz",
+    liveSite: "https://moviesz.herokuapp.com/",
+    id: 29,
+  },
 ];
 
 export const FrontProjectDetails = [
   {
     title: "Stats Preview",
     cover: statsPreview,
-    githhub: "https://github.com/hrushi-thorat/faq-accordion-card-main",
-    liveSite: "https://accordian-fem.netlify.app",
+    githhub: "https://github.com/hrushi-thorat/Stats-preview-card-component",
+    liveSite: "https://stats-preview-frontend-mentor.netlify.app",
     id: 68,
   },
   {
@@ -85,36 +93,38 @@ export const FrontProjectDetails = [
   {
     title: "Artical Component",
     cover: articalComponent,
-    githhub: "https://github.com/hrushi-thorat/faq-accordion-card-main",
-    liveSite: "https://accordian-fem.netlify.app",
+    githhub:
+      "https://github.com/hrushi-thorat/article-preview-component-master",
+    liveSite: "https://nervous-mirzakhani-9c54c8.netlify.app",
     id: 7,
   },
   {
     title: "Base Apparel",
     cover: baseApparel,
-    githhub: "https://github.com/hrushi-thorat/faq-accordion-card-main",
-    liveSite: "https://accordian-fem.netlify.app",
+    githhub: "https://github.com/hrushi-thorat/base-apparel-coming-soon-master",
+    liveSite: "https://base-apperal.netlify.app",
     id: 8,
   },
   {
     title: "Testmonial grid section",
     cover: TestmonialGrid,
-    githhub: "https://github.com/hrushi-thorat/faq-accordion-card-main",
-    liveSite: "https://accordian-fem.netlify.app",
+    githhub: "https://github.com/hrushi-thorat/testimonials-grid-section-main",
+    liveSite: "https://testomonial-grid.netlify.app",
     id: 91,
   },
   {
     title: "Profile Card",
     cover: ProfileCard,
-    githhub: "https://github.com/hrushi-thorat/faq-accordion-card-main",
-    liveSite: "https://accordian-fem.netlify.app",
+    githhub: "https://github.com/hrushi-thorat/profile-card-component-main",
+    liveSite: "https://practical-bassi-8d63e2.netlify.app",
     id: 99,
   },
   {
     title: "3 Card preview components",
     cover: column,
-    githhub: "https://github.com/hrushi-thorat/faq-accordion-card-main",
-    liveSite: "https://accordian-fem.netlify.app",
+    githhub:
+      "https://github.com/hrushi-thorat/3-column-preview-card-component-main",
+    liveSite: "https://3-column-frontend-mentor-challange.netlify.app",
     id: 66,
   },
 ];
