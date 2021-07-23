@@ -32,7 +32,7 @@ const AboutSection = () => {
           <motion.button variants={fade}>Github</motion.button>
         </motion.a>
         <motion.a
-          href="https://drive.google.com/file/d/1-zbnuc8iNlTbNPmchMItSEeBnUB6KjWG/view?usp=sharing"
+          href="https://drive.google.com/file/d/1mztL3kXuESqia9WN9A4gHjPH8dkLfjZV/view?usp=sharing"
           rel="noreferrer"
           target="_blank"
         >
